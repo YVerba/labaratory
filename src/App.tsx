@@ -1,11 +1,11 @@
-import './App.css'
+import { Main } from "./page/Main.tsx";
 
 function App() {
-  return (
-    <>
-
-    </>
-  )
+    return (
+        <>
+            <Main/>
+        </>
+    )
 }
 
 export default App
