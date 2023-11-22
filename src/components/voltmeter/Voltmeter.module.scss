@@ -1,0 +1,31 @@
+.numbers {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+}
+
+.scale {
+  position: relative;
+  top: 45px;
+  margin: 0 auto;
+  width: 80%;
+  height: 5px;
+  background-color: black;
+}
+
+.vIndicator {
+  position: relative;
+  top: 10px;
+  width: 5px;
+  height: 35px;
+  background-color: red;
+  left: 50%;
+}
+
+.vLabel {
+  position: relative;
+  margin: 0 auto;
+  width: 50px;
+  top: 20px;
+  font-size: 60px;
+}
