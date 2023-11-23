@@ -3,13 +3,13 @@ import { Voltmeter } from "../components/voltmeter/Voltmeter.tsx";
 import { RadioBtn } from "../components/radioBtn/RadioBtn.tsx";
 import { Photoresistor } from "../components/photoresistor/Photoresistor.tsx";
 import { Sensor } from "../components/sensor/Sensor.tsx";
+import { Circles } from "../components/circles/Circles.tsx";
 
 export const Main = () => {
     return (
         <div>
             <h1 className={styles.title}>Датчики медико-біологічної інформації</h1>
             <div className={styles.main}>
-
                 <div className={styles.sensor}>
                     <Sensor text={'Тензодатчик'} />
                 </div>
@@ -28,8 +28,10 @@ export const Main = () => {
                 <div className={styles.sensor}>
                     <RadioBtn />
                 </div>
-
             </div>
+
+            <Circles />
+
         </div>
     )
 }
