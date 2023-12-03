@@ -1,10 +1,13 @@
-import styles from './Photoresistor.module.scss'
+import styles from './Photoresistor.module.css'
+import { PhotoresistorPin } from './PhotoresistorPin'
 
 export const Photoresistor = () => {
     return (
         <div>
             <div className={styles.photoresistor}>
-                <div className={styles.lens}></div>
+                <div className={styles.lens}>
+                    <PhotoresistorPin/>
+                </div>
             </div>
 
             <div className={styles.text}>

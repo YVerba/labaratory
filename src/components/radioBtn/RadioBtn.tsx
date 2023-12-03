@@ -1,19 +1,21 @@
 import { useState } from 'react';
 import styles from './RadioRtn.module.scss';
+import { useApparateContext } from '../apparate';
 
 export const RadioBtn = () => {
+    const {currentToggle, setCurrentToggle} = useApparateContext()
+    
     const [rotation, setRotation] = useState(-45);
     const [activeLamp, setActiveLamp] = useState(1);
-    const [clickCount, setClickCount] = useState(0);
 
     const rotateButton = () => {
         setRotation(rotation + 30);
         setActiveLamp((activeLamp % 4) + 1);
-        setClickCount(clickCount + 1)
+        setCurrentToggle(currentToggle + 1)
 
-        if (clickCount === 3) {
+        if (currentToggle === 3) {
             setRotation(-45)
-            setClickCount(0)
+            setCurrentToggle(0)
         }
     };
 
