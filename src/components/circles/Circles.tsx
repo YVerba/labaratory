@@ -41,19 +41,19 @@ export const Circles = () => {
             <div className={styles.wrapper}>
                 <button
                     className={styles.circleBig}
-                    onClick={() => handleButtonClick('LARGE', 491, 37)}
+                    onClick={() => handleButtonClick('LARGE')}
                 >
                     491мм<sup>2</sup>
                 </button>
                 <button
                     className={styles.circleMedium}
-                    onClick={() => handleButtonClick('MEDIUM', 380, 41)}
+                    onClick={() => handleButtonClick('MEDIUM')}
                 >
                     380мм<sup>2</sup>
                 </button>
                 <button
                     className={styles.circleSmall}
-                    onClick={() => handleButtonClick('SMALL', 177, 58)}
+                    onClick={() => handleButtonClick('SMALL')}
                 >
                     177мм<sup>2</sup>
                 </button>
