@@ -1,7 +1,7 @@
-import { useApparateContext } from '.'
 import { Photoresistor } from '../photoresistor'
 import { RadioBtn } from '../radioBtn'
 import { Sensor } from '../sensor'
+import { Sensor1 } from '../sensor1/Sensor1.tsx'
 import { Voltmeter } from '../voltmeter'
 import styles from './Apparate.module.css'
 
@@ -9,7 +9,7 @@ export const Apparate = () => {
     return (
         <div className={styles.main}>
             <div className={styles.sensor}>
-                <Sensor text={'Тензодатчик'} />
+                <Sensor1 text={'Тензодатчик'} />
             </div>
             <div className={styles.sensor}>
                 <Sensor text={'Термодатчик'} />

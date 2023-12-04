@@ -4,6 +4,9 @@ import { Apparate } from '../components/apparate/Apparate.tsx';
 import { ApparateContextProvider } from '../components/apparate';
 import { ChartContextProvider } from '../components/chart/ChartState.tsx';
 import { Chart } from '../components/chart/Chart.tsx';
+import { Switch } from "../components/switch/Switch.tsx";
+import { Weight } from "../components/weight/Weight.tsx";
+import { ThermoSensor } from "../components/thermoSensor/ThermoSensor.tsx";
 
 export const Main = () => {
     return (
@@ -13,7 +16,11 @@ export const Main = () => {
                 <ChartContextProvider>
                     <Apparate />
 
+                    <Switch />
+
                     <div className={styles.container}>
+                        <Weight />
+                        <ThermoSensor />
                         <Circles />
                         <Chart 
                             label='Фоторезистор'
@@ -21,7 +28,6 @@ export const Main = () => {
                     </div>
                 </ChartContextProvider>
             </ApparateContextProvider>
-
         </div>
     )
 }

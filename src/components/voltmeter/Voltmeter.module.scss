@@ -1,14 +1,16 @@
 .numbers {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   font-size: 20px;
+  width: 300px;
+  margin: 0 auto;
 }
 
 .scale {
   position: relative;
   top: 45px;
   margin: 0 auto;
-  width: 80%;
+  width: 70%;
   height: 5px;
   background-color: black;
 }
