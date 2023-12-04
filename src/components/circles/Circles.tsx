@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import styles from './Circles.module.scss';
 import { ThermalSensorSize, useApparateContext } from '../apparate';
 import { useChartContext } from '../chart';
