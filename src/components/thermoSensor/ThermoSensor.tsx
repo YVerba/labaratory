@@ -1,3 +1,4 @@
+// @ts-ignore
 import styles from './ThermoSensor.module.scss'
 
 export const ThermoSensor = () => {

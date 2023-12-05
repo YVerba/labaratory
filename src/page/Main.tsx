@@ -1,3 +1,4 @@
+// @ts-ignore
 import styles from './Main.module.scss';
 import { Circles } from "../components/circles/Circles.tsx";
 import { Apparate } from '../components/apparate/Apparate.tsx';

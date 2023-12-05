@@ -1,4 +1,5 @@
 import {useState} from 'react';
+// @ts-ignore
 import styles from './Weight.module.scss';
 
 interface Circle {

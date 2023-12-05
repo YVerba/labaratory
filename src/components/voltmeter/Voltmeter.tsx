@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { useApparateContext } from '../apparate'
+// @ts-ignore
 import styles from './Voltmeter.module.scss'
 
 export const Voltmeter = () => {

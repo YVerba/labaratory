@@ -1,4 +1,4 @@
-import React from 'react';
+// @ts-ignore
 import styles from './Switch.module.scss';
 
 export const Switch = () => {
