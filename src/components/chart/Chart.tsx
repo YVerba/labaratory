@@ -5,9 +5,10 @@ import styles from './Chart.module.css'
 export interface ChartProps {
     type: ChartType
     label: string
+    xAxisLabel: string
 }
 
-export const Chart = ({ type, label }: ChartProps) => {
+export const Chart = ({ type, label, xAxisLabel }: ChartProps) => {
     const state = useChartContext(type)
 
     return (
@@ -17,8 +18,24 @@ export const Chart = ({ type, label }: ChartProps) => {
                     labels: state.data.map(point => point.x),
                     datasets: [{
                         data: state.data,
-                        label
-                    }]
+                        label,
+                    }],
+                }}
+                options={{
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: xAxisLabel,
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Напруга',
+                            }
+                        }
+                    }
                 }} />
         </div>
     )

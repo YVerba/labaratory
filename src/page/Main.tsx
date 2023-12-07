@@ -21,11 +21,22 @@ export const Main = () => {
 
                     <div className={styles.container}>
                         <Weight />
+                        <Chart 
+                            label='Тензодатчик'
+                            type='WEIGHT'
+                            xAxisLabel='Вага'/>
+
                         <ThermoSensor />
+                        <Chart 
+                            label='Термодатчик'
+                            type='THERMOSENSOR'
+                            xAxisLabel='Температура'/>
+
                         <Circles />
                         <Chart 
                             label='Фоторезистор'
-                            type='PHOTORESISTOR'/>
+                            type='PHOTORESISTOR'
+                            xAxisLabel='Площа'/>
                     </div>
                 </ChartContextProvider>
             </ApparateContextProvider>

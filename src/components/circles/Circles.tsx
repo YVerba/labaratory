@@ -16,13 +16,12 @@ const thermalSensorValues = new Map<ThermalSensorSize, ThermalSensorValue>([
 ])
 
 export const Circles = () => {
-    const { setThermalSensorSize, setVoltage, thermalSensorSize, currentToggle } = useApparateContext()
+    const { setThermalSensorSize, setVoltage, thermalSensorSize, currentToggle, enabled } = useApparateContext()
     const { addPoint } = useChartContext('PHOTORESISTOR')
 
     const handleButtonClick = (size: ThermalSensorSize) => {
         setThermalSensorSize(size)
-        if(currentToggle == 3) {
-            console.log(currentToggle)
+        if(currentToggle == 3 && enabled) {
             const value = thermalSensorValues.get(size)!
             setVoltage(value.voltage)
             addPoint(value.s.toString(), { x: value.s, y: value.voltage })
@@ -32,8 +31,10 @@ export const Circles = () => {
     useEffect(() => {
         if(thermalSensorSize){
             handleButtonClick(thermalSensorSize)
+        } else if(currentToggle == 3) {
+            setVoltage(0)
         }
-    }, [currentToggle])
+    }, [currentToggle, enabled])
 
     return (
         <div>

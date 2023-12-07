@@ -2,7 +2,9 @@ import { Point } from "chart.js";
 import { createContext, useContext, useMemo, useState } from "react";
 
 const ChartTypes = [
-    'PHOTORESISTOR'
+    'PHOTORESISTOR',
+    'WEIGHT',
+    'THERMOSENSOR',
 ] as const
 
 export type ChartType = typeof ChartTypes[number]
