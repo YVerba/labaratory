@@ -52,7 +52,7 @@ export const ApparateContextProvider = (props: ApparateContextProviderProps) => 
     const [voltage, setVoltage] = useState(0)
     const [currentToggle, setCurrentToggle] = useState(0)
     const [thermalSensorSize, setThermalSensorSize] = useState<ThermalSensorSize>(null)
-    const [circleWeights, setCircleWeights] = useState<number[]>([])
+    const [circleWeights, setCircleWeights] = useState<CircleWeight[]>([])
 
     const value: ApparateState = { 
         enabled,
