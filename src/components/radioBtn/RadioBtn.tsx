@@ -1,4 +1,5 @@
 import { useState } from 'react';
+// @ts-ignore
 import styles from './RadioRtn.module.scss';
 import { useApparateContext } from '../apparate';
 

@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+// @ts-ignore
 import styles from './Weight.module.scss';
 import { useApparateContext } from '../apparate';
 import { useChartContext } from '../chart';

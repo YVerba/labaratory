@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
+// @ts-ignore
 import styles from './Switch.module.scss';
 import { useApparateContext } from '../apparate';
 
