@@ -1,6 +1,46 @@
+import { useEffect, useRef, useState } from 'react';
 import styles from './ThermoSensor.module.scss'
+import { useApparateContext } from '../apparate';
+import { useChartContext } from '../chart';
 
 export const ThermoSensor = () => {
+    const {enabled, currentToggle, voltage, setVoltage} = useApparateContext()
+    const { addPoint } = useChartContext('THERMOSENSOR')
+    const [ buttonState, setButtonState ] = useState(false)
+    const [ temperature, setTemperature ] = useState(18)
+    const indicator = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        if(!enabled || currentToggle != 1) {
+            setButtonState(false)
+        }
+    }, [enabled, currentToggle, buttonState])
+
+    useEffect(() => {
+        let intervalId: number | undefined
+        if(buttonState) {
+            intervalId = setInterval(() => {
+                setTemperature(temperature => temperature + Math.floor(Math.random() * 3))
+            }, 1000)
+        }
+
+        return () => {
+            clearInterval(intervalId)
+        }
+    }, [buttonState])
+
+    useEffect(() => {
+        if(temperature >= 55){
+            setButtonState(false)
+        } else if(temperature >= 30) {
+            const currentVoltage = temperature * 1.25
+            setVoltage(currentVoltage)
+            addPoint(`${temperature}:${currentVoltage}`, { 
+                x: parseFloat(temperature.toFixed(1)), y: currentVoltage 
+            })
+        }
+    }, [temperature])
+
     return (
         <div className={styles.wrapper}>
             <h1 className={styles.title}>Підігрів води</h1>
@@ -20,12 +60,23 @@ export const ThermoSensor = () => {
                     <div>70</div>
                 </div>
                 <div className={styles.scaleWrapper}>
-                    <div className={styles.scale}></div>
+                    <div 
+                        className={styles.scale}
+                        ref={indicator}
+                        style={{height: `${temperature * 2.22}px`}}/>
                 </div>
             </div>
 
             <div className={styles.stove}>
-                <button className={styles.button}>Старт</button>
+                <button 
+                    className={styles.button}
+                    onClick={() => {
+                        if(temperature == 18){
+                            setButtonState((value) => !value)
+                        }
+                    }}>
+                        {buttonState ? 'Стоп' : 'Старт'}
+                </button>
             </div>
         </div>
     );
