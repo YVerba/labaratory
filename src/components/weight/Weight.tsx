@@ -13,7 +13,7 @@ const weights = new Map<CircleSize, CircleWeight>([
     ['SMALL', { weight: 96.5, voltage: 20 }],
     ['MEDIUM', { weight: 98.2, voltage: 23 }],
     ['BIG', { weight: 99.2, voltage: 22 }],
-    ['BIGGEST', { weight: 101.5, voltage: 23 }]
+    ['BIGGEST', { weight: 101.5, voltage: 27 }]
 ])
 
 export const Weight = () => {
@@ -22,7 +22,7 @@ export const Weight = () => {
 
     const handleButtonClick = (size: CircleSize) => {
         setCircleWeights(size)
-        if(currentToggle == 1 && enabled) {
+        if(currentToggle == 0 && enabled) {
             const value = weights.get(size)!
             setVoltage(value.voltage)
             addPoint(value.weight.toString(), { x: value.weight, y: value.voltage })
@@ -32,7 +32,7 @@ export const Weight = () => {
     useEffect(() => {
         if(circleWeights){
             handleButtonClick(circleWeights)
-        } else if(currentToggle == 1) {
+        } else if(currentToggle == 0) {
             setVoltage(0)
         }
     }, [currentToggle, enabled])
