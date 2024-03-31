@@ -7,6 +7,12 @@
   height: 430px;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .pot {
   height: 200px;
   width: 130px;
@@ -27,7 +33,6 @@
 .stove {
   position: relative;
   top: -310px;
-  left: -14px;
   width: 160px;
   height: 50px;
   background-color: #5e5e5e;

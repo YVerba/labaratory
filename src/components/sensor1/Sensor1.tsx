@@ -1,5 +1,6 @@
 // @ts-ignore
 import styles from './Sensor1.module.scss'
+import {SensorPin} from "./SensorPin.tsx";
 
 interface Props {
     text: string;
@@ -15,7 +16,7 @@ export const Sensor1 = ({text}: Props) => {
             </div>
 
             <div className={styles.btnContainer}>
-
+                <SensorPin />
             </div>
 
             <div className={styles.text}>

@@ -10,6 +10,7 @@
 .container {
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .circle {
@@ -22,18 +23,18 @@
   text-align: center;
   padding: 2px;
 
-  &::before {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid black;
-  }
+  //&::before {
+  //  content: '';
+  //  position: absolute;
+  //  width: 20px;
+  //  height: 20px;
+  //  background-color: #fff;
+  //  border-radius: 50%;
+  //  top: 50%;
+  //  left: 50%;
+  //  transform: translate(-50%, -50%);
+  //  border: 1px solid black;
+  //}
 }
 
 .circleSmall {
@@ -42,17 +43,20 @@
 
 .circleMedium {
   @extend .circle;
-  padding: 4px;
+  width: 84px;
+  height: 84px;
 }
 
 .circleBig {
   @extend .circle;
-  padding: 6px;
+  width: 87px;
+  height: 87px;
 }
 
 .circleBiggest {
   @extend .circle;
-  padding: 8px;
+  width: 90px;
+  height: 90px;
 }
 
 .circleNew {
