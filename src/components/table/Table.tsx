@@ -1,25 +1,29 @@
 import styles from './Table.module.css'
-import {useApparateContext} from "../apparate";
+import { ChartType, useChartContext } from '../chart';
 
 export interface TableProps {
+    type: ChartType
     label: string
 }
 
-export const Table = ({label}: TableProps) => {
-
-    const {} = useApparateContext()
+export const Table = ({ label, type }: TableProps) => {
+    const state = useChartContext(type)
 
     return (
         <div className={styles.table}>
             <table>
-                <tbody>
                 <tr>
-                    <td>{label}:</td>
+                    <th>{label}:</th>
+                    {state.data.map(point => (
+                        <td>{point.x}</td>
+                    ))}
                 </tr>
                 <tr>
-                    <td>Вольтаж:</td>
+                    <th>Вольтаж:</th>
+                    {state.data.map(point => (
+                        <td>{point.y}</td>
+                    ))}
                 </tr>
-                </tbody>
             </table>
         </div>
     )

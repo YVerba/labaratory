@@ -27,6 +27,7 @@ export const Main = () => {
                             type='WEIGHT'
                             xAxisLabel='Вага'/>
                         <Table
+                            type='WEIGHT'
                             label={'Вага'}
                         />
 
@@ -36,6 +37,7 @@ export const Main = () => {
                             type='THERMOSENSOR'
                             xAxisLabel='Температура'/>
                         <Table
+                            type='THERMOSENSOR'
                             label={'Температура'}
                         />
 
@@ -45,6 +47,7 @@ export const Main = () => {
                             type='PHOTORESISTOR'
                             xAxisLabel='Площа'/>
                         <Table
+                            type='PHOTORESISTOR'
                             label={'Площа'}
                         />
 
