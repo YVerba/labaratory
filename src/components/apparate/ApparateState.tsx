@@ -1,13 +1,20 @@
 import { createContext, useContext, useState } from "react"
-import { CircleWeight } from "../weight/Weight"
 
 const ThermalSensorSizes = [
     'SMALL',
     'MEDIUM',
     'LARGE'
-] as const 
+] as const
+
+const CircleSizes = [
+    'SMALL',
+    'MEDIUM',
+    'BIG',
+    'BIGGEST',
+] as const
 
 export type ThermalSensorSize = typeof ThermalSensorSizes[number] | null
+export type CircleSize = typeof CircleSizes[number] | null
 
 export interface ApparateState {
     enabled: boolean
@@ -22,8 +29,8 @@ export interface ApparateState {
     thermalSensorSize: ThermalSensorSize
     setThermalSensorSize: (thermalSensorSize: ThermalSensorSize) => void
 
-    circleWeights: CircleWeight[]
-    setCircleWeights: (circleWeights: CircleWeight[]) => void
+    circleWeights: CircleSize
+    setCircleWeights: (circleWeights: CircleSize) => void
 }
 
 const ApparateContext = createContext<ApparateState>({
@@ -39,7 +46,7 @@ const ApparateContext = createContext<ApparateState>({
     thermalSensorSize: null,
     setThermalSensorSize: () => {},
 
-    circleWeights: [],
+    circleWeights: null,
     setCircleWeights: () => {},
 })
 
@@ -52,7 +59,7 @@ export const ApparateContextProvider = (props: ApparateContextProviderProps) => 
     const [voltage, setVoltage] = useState(0)
     const [currentToggle, setCurrentToggle] = useState(0)
     const [thermalSensorSize, setThermalSensorSize] = useState<ThermalSensorSize>(null)
-    const [circleWeights, setCircleWeights] = useState<CircleWeight[]>([])
+    const [circleWeights, setCircleWeights] = useState<CircleSize>(null)
 
     const value: ApparateState = { 
         enabled,

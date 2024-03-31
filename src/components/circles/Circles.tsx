@@ -3,6 +3,8 @@ import { useEffect } from 'react';
 import styles from './Circles.module.scss';
 import { ThermalSensorSize, useApparateContext } from '../apparate';
 import { useChartContext } from '../chart';
+// import formatters from "chart.js/dist/core/core.ticks";
+// import values = formatters.values;
 
 type ThermalSensorValue = {
     s: number,
@@ -38,7 +40,7 @@ export const Circles = () => {
 
     return (
         <div>
-            <h1 className={styles.title}>Обрати площу круга</h1>
+            <h1 className={styles.title}>Оберіть площу круга</h1>
 
             <div className={styles.wrapper}>
                 <button

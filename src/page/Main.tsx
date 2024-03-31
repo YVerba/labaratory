@@ -8,6 +8,7 @@ import { Chart } from '../components/chart/Chart.tsx';
 import { Switch } from "../components/switch/Switch.tsx";
 import { Weight } from "../components/weight/Weight.tsx";
 import { ThermoSensor } from "../components/thermoSensor/ThermoSensor.tsx";
+import {Table} from "../components/table/Table.tsx";
 
 export const Main = () => {
     return (
@@ -25,18 +26,28 @@ export const Main = () => {
                             label='Тензодатчик'
                             type='WEIGHT'
                             xAxisLabel='Вага'/>
+                        <Table
+                            label={'Вага'}
+                        />
 
                         <ThermoSensor />
                         <Chart 
                             label='Термодатчик'
                             type='THERMOSENSOR'
                             xAxisLabel='Температура'/>
+                        <Table
+                            label={'Температура'}
+                        />
 
                         <Circles />
                         <Chart 
                             label='Фоторезистор'
                             type='PHOTORESISTOR'
                             xAxisLabel='Площа'/>
+                        <Table
+                            label={'Площа'}
+                        />
+
                     </div>
                 </ChartContextProvider>
             </ApparateContextProvider>
