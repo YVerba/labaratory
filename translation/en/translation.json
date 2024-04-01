@@ -1,0 +1,39 @@
+{
+  "mainTitle": {
+    "title": "Sensors of medical and biological information"
+  },
+  "model": {
+    "strainGauge": "Strain gauge",
+    "thermoSensor": "Thermo sensor",
+    "capacitiveSensor": "Capacitive sensor",
+    "photoresistor": "Photoresistor",
+    "sensorSelection": "Select sensor"
+  },
+  "connectModel": {
+    "title": "Connect the layout to the network",
+    "on": "On",
+    "off": "Off"
+  },
+  "weightTitle": {
+    "title": "Choose the weight"
+  },
+  "thermosensorTitle": {
+    "title": "Water heating"
+  },
+  "photoresistorTitle": {
+    "title": "Select the area of the circle"
+  },
+  "table": {
+    "voltage": "Voltage",
+    "weight": "Weight",
+    "temperature": "Temperature",
+    "square": "Square"
+  },
+  "chart": {
+    "voltage": "Voltage"
+  },
+  "waterHeating": {
+    "start": "Start",
+    "stop": "Stop"
+  }
+}

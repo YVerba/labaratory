@@ -1,0 +1,39 @@
+{
+  "mainTitle": {
+    "title": "Датчики медико-біологічної інформації"
+  },
+  "model": {
+    "strainGauge": "Тензодатчик",
+    "thermoSensor": "Термодатчик",
+    "capacitiveSensor": "Ємнісний датчик",
+    "photoresistor": "Фоторезистор",
+    "sensorSelection": "Вибір датчика"
+  },
+  "connectModel": {
+    "title": "Під'єднати макет до мережі",
+    "on": "Вкл",
+    "off": "Викл"
+  },
+  "weightTitle": {
+    "title": "Оберіть вагу тягарця"
+  },
+  "thermosensorTitle": {
+    "title": "Підігрів води"
+  },
+  "photoresistorTitle": {
+    "title": "Оберіть площу круга"
+  },
+  "table": {
+    "voltage": "Вольтаж",
+    "weight": "Вага",
+    "temperature": "Температура",
+    "square": "Площа"
+  },
+  "chart": {
+    "voltage": "Напруга"
+  },
+  "waterHeating": {
+    "start": "Старт",
+    "stop": "Стоп"
+  }
+}
