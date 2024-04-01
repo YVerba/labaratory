@@ -9,11 +9,16 @@ import { Switch } from "../components/switch/Switch.tsx";
 import { Weight } from "../components/weight/Weight.tsx";
 import { ThermoSensor } from "../components/thermoSensor/ThermoSensor.tsx";
 import {Table} from "../components/table/Table.tsx";
+import Header from "../components/header/Header.tsx";
+import '../i18n/i18n.tsx'
+import {useTranslation} from "react-i18next";
 
 export const Main = () => {
+    const { t } = useTranslation()
+
     return (
         <div>
-            <h1 className={styles.title}>Датчики медико-біологічної інформації</h1>
+            <Header />
             <ApparateContextProvider>
                 <ChartContextProvider>
                     <Apparate />
@@ -25,30 +30,30 @@ export const Main = () => {
                         <Chart 
                             label='Тензодатчик'
                             type='WEIGHT'
-                            xAxisLabel='Вага'/>
+                            xAxisLabel={t("table.weight")}/>
                         <Table
                             type='WEIGHT'
-                            label={'Вага'}
+                            label={t("table.weight")}
                         />
 
                         <ThermoSensor />
                         <Chart 
                             label='Термодатчик'
                             type='THERMOSENSOR'
-                            xAxisLabel='Температура'/>
+                            xAxisLabel={t("table.temperature")}/>
                         <Table
                             type='THERMOSENSOR'
-                            label={'Температура'}
+                            label={t("table.temperature")}
                         />
 
                         <Circles />
                         <Chart 
                             label='Фоторезистор'
                             type='PHOTORESISTOR'
-                            xAxisLabel='Площа'/>
+                            xAxisLabel={t('table.square')}/>
                         <Table
                             type='PHOTORESISTOR'
-                            label={'Площа'}
+                            label={t('table.square')}
                         />
 
                     </div>

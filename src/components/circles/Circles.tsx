@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import styles from './Circles.module.scss';
 import { ThermalSensorSize, useApparateContext } from '../apparate';
 import { useChartContext } from '../chart';
+import {useTranslation} from "react-i18next";
 // import formatters from "chart.js/dist/core/core.ticks";
 // import values = formatters.values;
 
@@ -20,6 +21,7 @@ const thermalSensorValues = new Map<ThermalSensorSize, ThermalSensorValue>([
 export const Circles = () => {
     const { setThermalSensorSize, setVoltage, thermalSensorSize, currentToggle, enabled } = useApparateContext()
     const { addPoint } = useChartContext('PHOTORESISTOR')
+    const { t } = useTranslation()
 
     const handleButtonClick = (size: ThermalSensorSize) => {
         setThermalSensorSize(size)
@@ -40,7 +42,7 @@ export const Circles = () => {
 
     return (
         <div>
-            <h1 className={styles.title}>Оберіть площу круга</h1>
+            <h1 className={styles.title}>{t("photoresistorTitle.title")}</h1>
 
             <div className={styles.wrapper}>
                 <button

@@ -3,6 +3,7 @@ import {useEffect, useRef, useState} from 'react';
 import styles from './ThermoSensor.module.scss'
 import {useApparateContext} from '../apparate';
 import {useChartContext} from '../chart';
+import {useTranslation} from "react-i18next";
 
 export const ThermoSensor = () => {
     // @ts-ignore
@@ -11,6 +12,7 @@ export const ThermoSensor = () => {
     const [buttonState, setButtonState] = useState(false)
     const [temperature, setTemperature] = useState(18)
     const indicator = useRef<HTMLDivElement>(null)
+    const { t } = useTranslation()
 
     useEffect(() => {
         if (!enabled || currentToggle != 1) {
@@ -46,7 +48,7 @@ export const ThermoSensor = () => {
 
     return (
         <div className={styles.wrapper}>
-            <h1 className={styles.title}>Підігрів води</h1>
+            <h1 className={styles.title}>{t("thermosensorTitle.title")}</h1>
 
             <div className={styles.container}>
                 <div className={styles.pot}></div>
@@ -79,7 +81,7 @@ export const ThermoSensor = () => {
                                 setButtonState((value) => !value)
                             }
                         }}>
-                        {buttonState ? 'Стоп' : 'Старт'}
+                        {buttonState ? t("waterHeating.stop") : t("waterHeating.start")}
                     </button>
                 </div>
             </div>

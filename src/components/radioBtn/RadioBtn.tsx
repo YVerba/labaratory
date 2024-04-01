@@ -2,12 +2,13 @@ import { useState } from 'react';
 // @ts-ignore
 import styles from './RadioRtn.module.scss';
 import { useApparateContext } from '../apparate';
+import {useTranslation} from "react-i18next";
 
 export const RadioBtn = () => {
     const {currentToggle, setCurrentToggle} = useApparateContext()
-    
     const [rotation, setRotation] = useState(-45);
     const [activeLamp, setActiveLamp] = useState(1);
+    const { t } = useTranslation()
 
     const rotateButton = () => {
         setRotation(rotation + 30);
@@ -47,7 +48,7 @@ export const RadioBtn = () => {
             </div>
 
             <div className={styles.text}>
-                Вибір датчика
+                {t("model.sensorSelection")}
             </div>
         </div>
     );

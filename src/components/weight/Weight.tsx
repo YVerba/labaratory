@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import styles from './Weight.module.scss';
 import {CircleSize, useApparateContext} from '../apparate';
 import { useChartContext } from '../chart';
+import {useTranslation} from "react-i18next";
 
 export interface CircleWeight {
     weight: number
@@ -19,6 +20,7 @@ const weights = new Map<CircleSize, CircleWeight>([
 export const Weight = () => {
     const { circleWeights, setCircleWeights, enabled, currentToggle, setVoltage } = useApparateContext()
     const { addPoint } = useChartContext('WEIGHT')
+    const { t } = useTranslation()
 
     const handleButtonClick = (size: CircleSize) => {
         setCircleWeights(size)
@@ -39,7 +41,7 @@ export const Weight = () => {
 
     return (
         <div className={styles.wrapper}>
-            <h1 className={styles.title}>Оберіть вагу тягарця</h1>
+            <h1 className={styles.title}>{t("weightTitle.title")}</h1>
 
             <div className={styles.container}>
                 <button

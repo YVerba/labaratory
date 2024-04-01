@@ -1,6 +1,7 @@
 import { ChartType, useChartContext } from "./ChartState"
 import { Line } from 'react-chartjs-2'
 import styles from './Chart.module.css'
+import {useTranslation} from "react-i18next";
 
 export interface ChartProps {
     type: ChartType
@@ -10,6 +11,7 @@ export interface ChartProps {
 
 export const Chart = ({ type, label, xAxisLabel }: ChartProps) => {
     const state = useChartContext(type)
+    const { t } = useTranslation()
 
     return (
         <div className={styles['chart-container']}>
@@ -32,7 +34,7 @@ export const Chart = ({ type, label, xAxisLabel }: ChartProps) => {
                         y: {
                             title: {
                                 display: true,
-                                text: 'Напруга',
+                                text: t("chart.voltage"),
                             }
                         }
                     }
