@@ -1,7 +1,10 @@
 import styles from './Photoresistor.module.css'
 import { PhotoresistorPin } from './PhotoresistorPin'
+import {useTranslation} from "react-i18next";
 
 export const Photoresistor = () => {
+    const { t } = useTranslation()
+
     return (
         <div>
             <div className={styles.photoresistor}>
@@ -11,7 +14,7 @@ export const Photoresistor = () => {
             </div>
 
             <div className={styles.text}>
-                Фоторезистор
+                {t("model.photoresistor")}
             </div>
         </div>
     )

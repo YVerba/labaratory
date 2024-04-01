@@ -1,5 +1,6 @@
 import styles from './Table.module.css'
 import { ChartType, useChartContext } from '../chart';
+import {useTranslation} from "react-i18next";
 
 export interface TableProps {
     type: ChartType
@@ -8,6 +9,7 @@ export interface TableProps {
 
 export const Table = ({ label, type }: TableProps) => {
     const state = useChartContext(type)
+    const { t } = useTranslation()
 
     return (
         <div className={styles.table}>
@@ -19,7 +21,7 @@ export const Table = ({ label, type }: TableProps) => {
                     ))}
                 </tr>
                 <tr>
-                    <th>Вольтаж:</th>
+                    <th>{t("table.voltage")}:</th>
                     {state.data.map(point => (
                         <td>{point.y}</td>
                     ))}
