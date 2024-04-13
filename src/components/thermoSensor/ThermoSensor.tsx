@@ -25,7 +25,7 @@ export const ThermoSensor = () => {
         if (buttonState) {
             // @ts-ignore
             intervalId = setInterval(() => {
-                setTemperature(temperature => temperature + Math.floor(Math.random() * 3))
+                setTemperature(temperature => temperature + Math.floor(Math.random() * 4))
             }, 1000)
         }
 

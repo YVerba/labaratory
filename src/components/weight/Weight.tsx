@@ -11,10 +11,10 @@ export interface CircleWeight {
 }
 
 const weights = new Map<CircleSize, CircleWeight>([
-    ['SMALL', { weight: 96.5, voltage: 20 }],
-    ['MEDIUM', { weight: 98.2, voltage: 23 }],
-    ['BIG', { weight: 99.2, voltage: 22 }],
-    ['BIGGEST', { weight: 101.5, voltage: 27 }]
+    ['SMALL', { weight: 96.5, voltage: Math.floor(Math.random() * 8) + 20 }],
+    ['MEDIUM', { weight: 98.2, voltage: Math.floor(Math.random() * 14) + 20 }],
+    ['BIG', { weight: 99.2, voltage: Math.floor(Math.random() * 14) + 20 }],
+    ['BIGGEST', { weight: 101.5, voltage: Math.floor(Math.random() * 9) + 27 }]
 ])
 
 export const Weight = () => {
