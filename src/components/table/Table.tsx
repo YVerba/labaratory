@@ -14,19 +14,21 @@ export const Table = ({ label, type }: TableProps) => {
     return (
         <div className={styles.table}>
             <table>
+                <tbody>
                 <tr>
                     <th>{label}:</th>
                     {state.data.map(point => (
-                        <td>{point.x}</td>
-                    ))}
+                        <td key={point.x}>{point.x}</td>
+                        ))}
                 </tr>
                 <tr>
                     <th>{t("table.voltage")}:</th>
                     {state.data.map(point => (
-                        <td>{point.y}</td>
-                    ))}
+                        <td key={point.x}>{point.y}</td>
+                        ))}
                 </tr>
+                </tbody>
             </table>
         </div>
-    )
+    );
 }

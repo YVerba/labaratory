@@ -13,9 +13,9 @@ type ThermalSensorValue = {
 }
 
 const thermalSensorValues = new Map<ThermalSensorSize, ThermalSensorValue>([
-    ['LARGE', {s: 491, voltage: 37}],
-    ['MEDIUM', {s: 380, voltage: 41}],
-    ['SMALL', {s: 177, voltage: 58}],
+    ['LARGE', {s: 491, voltage: Math.floor(Math.random() * 15) + 51 }],
+    ['MEDIUM', {s: 380, voltage: Math.floor(Math.random() * 10) + 41 }],
+    ['SMALL', {s: 177, voltage: Math.floor(Math.random() * 9) + 32 }],
 ])
 
 export const Circles = () => {
@@ -46,10 +46,10 @@ export const Circles = () => {
 
             <div className={styles.wrapper}>
                 <button
-                    className={styles.circleBig}
-                    onClick={() => handleButtonClick('LARGE')}
+                    className={styles.circleSmall}
+                    onClick={() => handleButtonClick('SMALL')}
                 >
-                    491мм<sup>2</sup>
+                    177мм<sup>2</sup>
                 </button>
                 <button
                     className={styles.circleMedium}
@@ -58,10 +58,10 @@ export const Circles = () => {
                     380мм<sup>2</sup>
                 </button>
                 <button
-                    className={styles.circleSmall}
-                    onClick={() => handleButtonClick('SMALL')}
+                    className={styles.circleBig}
+                    onClick={() => handleButtonClick('LARGE')}
                 >
-                    177мм<sup>2</sup>
+                    491мм<sup>2</sup>
                 </button>
             </div>
         </div>
