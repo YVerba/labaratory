@@ -2,6 +2,14 @@
   "mainTitle": {
     "title": "Sensors of medical and biological information"
   },
+  "instruction": {
+    "header": "Instructions for use",
+    "paragraph1": "Before starting work, it is necessary to connect the layout to the network, then we can choose what exactly we need for testing (strain sensor, temperature sensor or photoresistor).",
+    "paragraph2": "If we need a strain gauge, we select the number 1 (strain gauge serial number), select the strain gauge under the layout, and select the weight of the weight.",
+    "paragraph3": "If we need a temperature sensor, we select the number 2 (the temperature sensor's serial number), select the temperature sensor under the layout and press <Start>, wait a few seconds, after which the graph is built.",
+    "paragraph4": "If we need a photoresistor, we choose the number 4 (the photoresistor serial number), choose the photoresistor under the layout, choose the area of ​​the circle.",
+    "paragraph5": "To reset all results and repeat the experiment, you need to reload the page."
+  },
   "model": {
     "strainGauge": "Strain gauge",
     "thermoSensor": "Thermo sensor",
