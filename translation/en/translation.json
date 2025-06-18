@@ -4,10 +4,10 @@
   },
   "instruction": {
     "header": "Instructions for use",
-    "paragraph1": "Before starting work, it is necessary to connect the layout to the network, then we can choose what exactly we need for testing (strain sensor, temperature sensor or photoresistor).",
-    "paragraph2": "If we need a strain gauge, we select the number 1 (strain gauge serial number), select the strain gauge under the layout, and select the weight of the weight.",
-    "paragraph3": "If we need a temperature sensor, we select the number 2 (the temperature sensor's serial number), select the temperature sensor under the layout and press <Start>, wait a few seconds, after which the graph is built.",
-    "paragraph4": "If we need a photoresistor, we choose the number 4 (the photoresistor serial number), choose the photoresistor under the layout, choose the area of ​​the circle.",
+    "paragraph1": "Before starting work, you need to turn on the layout by pressing the button under the layout, changing its state from <Off> to <On>, then we can choose what exactly we need for testing (strain sensor, temperature sensor or photoresistor).",
+    "paragraph2": "To launch the load cell window, we select the number 1 by clicking on the gray rectangular handle in the <Sensor Selection> window of the layout, then select the load cell under the layout and select the weight of the load cell.",
+    "paragraph3": "To launch the thermal sensor window, we select the number 2 by clicking on the gray rectangular handle in the <Sensor Selection> window of the layout, then select the thermal sensor under the layout and click <Start>, wait a few seconds, after which the graph is built.",
+    "paragraph4": "To launch the photoresistor window, we select the number 4 by clicking on the gray rectangular handle in the <Sensor Selection> window of the layout, then select the photoresistor under the layout, select the area of ​​the circle.",
     "paragraph5": "To reset all results and repeat the experiment, you need to reload the page."
   },
   "model": {
@@ -19,8 +19,8 @@
   },
   "connectModel": {
     "title": "Connect the layout to the network",
-    "on": "On",
-    "off": "Off"
+    "off": "On",
+    "on": "Off"
   },
   "weightTitle": {
     "title": "Choose the weight"
